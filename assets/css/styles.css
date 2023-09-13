@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(../imgs/pastofondo.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 5.8fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "nav"
+        "prof"
+        "pasto"
+        "centro"
+        "playa"
+        "footer";
+    font-weight: 800;
+    font-size: 12px;
+    text-align: center;
+}
+.pokeball{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    z-index: 3;
+    position: absolute;
+
+}
+.pokeball button{
+    
+    background: none;
+    border: none;
+}
+.pokeball img{
+    margin-top: 40px;
+    width: 80px;
+
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    grid-area: nav;
+}
+.sombra{
+    margin-top: 40px;
+    width: 80px;
+    filter: drop-shadow(0px 10px 5px );
+}
+.sombra img{
+    opacity: 0%;
+}
+#menu{
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(#ff0000 0%, #ff0000 80px, #ffff 10px, #ffff 100%);
+    height: 100vh;
+    z-index: 2;
+    
+}
+    
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    list-style: none;
+    
+}
+nav ul li{
+    margin:20px 0px ;
+}
+main{
+    display: grid;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.prof{
+    grid-area: prof;
+    
+}
+.centro{
+    grid-area: centro;
+}
+.playa{
+    grid-area: playa;
+}
+.pokemon{
+    position: absolute;
+}
+.pikachu{
+    position: absolute;
+    left: 180px;
+    top: 250px;
+    opacity: 0;
+    width: 50px;
+    z-index: 4;
+    transition: transform .2s;
+
+}
+.pikachu:hover{
+    opacity: 100%;
+    transform: scale(2);
+}
+.pastos{
+    
+    grid-area: pasto;
+    overflow-y: auto;
+    
+}
+.pasto{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
+
+}
+.pasto img{
+    width: 128px;
+    filter:drop-shadow(0px 5px 3px) ;
+}
+.pasto img:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+footer{
+    grid-area: footer;
+}
+
+@media  screen and (min-width: 567px){
+    .container{
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr 1fr 0.8fr;
+        grid-template-areas: 
+        "nav prof prof prof"
+        "nav pasto pasto pasto"
+        "nav centro centro centro"
+        "nav playa playa playa"
+        "nav footer footer footer"
+        ;
+    }
+
+    .pokeball{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        z-index: 3;
+        position: absolute;
+        grid-area: nav;
+    }
+    .pokeball button{
+        
+        background: none;
+        border: none;
+    }
+    .pokeball img{
+        margin-top: 40px;
+        width: 80px;
+    
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    
+    }
+    .sombra{
+        margin-top: 40px;
+        width: 80px;
+        filter: drop-shadow(0px 10px 5px );
+    }
+    .sombra img{
+        opacity: 0%;
+    }
+    #menu{
+        
+        position: absolute;
+        width: 100%;
+        background: linear-gradient(#ff0000 0%, #ff0000 80px, #ffff 10px, #ffff 100%);
+        height: 100vh;
+        z-index: 2;
+        width: 20vw;
+        grid-area: nav;
+
+    }
+    
+    
+    main{
+        
+    }
+    .pastos{
+        
+        display: flex;
+        grid-area: pasto;
+        width: 80vw;
+        
+
+    }
+    .pasto{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        justify-items: center;
+        align-content: center;
+        gap: 0px;
+        
+    }
+
+
+
+
+}
