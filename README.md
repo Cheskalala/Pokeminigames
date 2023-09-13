@@ -1,1 +1,1 @@
-# Pokemon-minigames
+# Pokeminigames
