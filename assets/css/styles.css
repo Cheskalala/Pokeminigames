@@ -13,38 +13,18 @@ body{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr 5.8fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-        "nav"
-        "prof"
-        "pasto"
-        "centro"
-        "playa"
-        "footer";
+    "nav"
+    "prof"
+    "pasto"
+    "centro"
+    "playa"
+    "footer";
     font-weight: 800;
     font-size: 12px;
     text-align: center;
 }
-.pokeball{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    z-index: 3;
-    position: absolute;
-
-}
-.pokeball button{
-    
-    background: none;
-    border: none;
-}
-.pokeball img{
-    margin-top: 40px;
-    width: 80px;
-
-}
-
 nav{
     display: flex;
     flex-direction: column;
@@ -52,22 +32,41 @@ nav{
     text-align: center;
     gap: 10px;
     grid-area: nav;
+    position: relative;
 }
-.sombra{
+.pokeball{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    z-index: 4;
+    background: #ff0000;
+    height: 50px;
+    width: 100%;
+
+}
+.pokeball button{
+    position: absolute;
+    top: 10px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: solid 5px #000;
+}
+.pokeball img{
     margin-top: 40px;
     width: 80px;
-    filter: drop-shadow(0px 10px 5px );
+
 }
-.sombra img{
-    opacity: 0%;
-}
+
+
 #menu{
     position: absolute;
     width: 100%;
-    background: linear-gradient(#ff0000 0%, #ff0000 80px, #ffff 10px, #ffff 100%);
+    background: #ffff;
     height: 100vh;
     z-index: 2;
-    
+    display: none;
 }
     
 
@@ -82,28 +81,62 @@ nav ul{
 nav ul li{
     margin:20px 0px ;
 }
+
 main{
-    display: grid;
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
+
+    
 }
 .prof{
+    display: flex;
+    flex-direction: row;
     grid-area: prof;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+.prof img{
+    width: 100px;
+    filter: drop-shadow(5px 5px 3px);
+
     
+}
+.prof-text {
+    width: 200px;
+    height: 61px;
+
+}
+.prof-text img{
+    width: 200px;
+    height: 61px;
+    filter: drop-shadow(0 0 0);
+}
+.prof-text p{
+    position: absolute;
+    width: 150px;
+    top: 10px;
+    left: 125px;
+    justify-content: center;
+    align-items: center;
 }
 .centro{
     grid-area: centro;
+    position: relative;
 }
 .playa{
     grid-area: playa;
+    position: relative;
 }
 .pokemon{
     position: absolute;
 }
 .pikachu{
-    position: absolute;
+    position: relative;
     left: 180px;
     top: 250px;
     opacity: 0;
@@ -116,24 +149,27 @@ main{
     opacity: 100%;
     transform: scale(2);
 }
-.pastos{
-    
+.bosque{
+    display: block;
     grid-area: pasto;
-    overflow-y: auto;
-    
+    position: relative;
+    justify-content: center;
 }
 .pasto{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
     z-index: 1;
-    position: absolute;
+    position: relative;
+    left: 0;
+    
+
 
 }
+
+
 .pasto img{
-    width: 128px;
+    width: 110px;
     filter:drop-shadow(0px 5px 3px) ;
 }
 .pasto img:hover{
@@ -160,7 +196,7 @@ footer{
 @media  screen and (min-width: 567px){
     .container{
         display: grid;
-        grid-template-columns: 0.5fr 1.5fr 1fr 1fr;
+        grid-template-columns: 1fr 1.5fr 1fr 1fr;
         grid-template-rows: 2fr 1fr 1fr 1fr 0.8fr;
         grid-template-areas: 
         "nav prof prof prof"
