@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="">
 </head>
 <body>
     <div class="container">
@@ -15,31 +16,41 @@
             </div>
             <div id="menu">
                 <ul >
-                    <li>Bienvenida</li>
-                    <li>Centro Pokemon</li>
-                    <li>Bosque</li>
-                    <li>Playa</li>
-                    <li>Contacto</li>
+                    <a href="#bienvenida"><li>Bienvenida</li></a>
+                    <a href=""><li>Centro Pokemon</li></a>
+                    <a href=""><li>Bosque</li></a>
+                    <a href=""><li>Playa</li></a>
+                    <a href=""><li>Contacto</li></a>
                 </ul>
             </div>
         </nav>
-        <main>
-            <div class="bienvenida">
+        <main class="main">
+            <div class="bienvenida" id="bienvenida">
+                
                 <div class="prof">
                     <img src="assets/imgs/profesor.png   " alt="">
+                </div>
+                <div class="pregunta">
                     <div class="prof-text">
-                        <img src="assets/imgs/texto.png" alt="">
-                        <p>Bievenid@ a Pokeminigames
-                       Para comenzar dime ¿Eres un Chico o una Chica?</p>
+                        <p>Bievenid@ a Pokeminigames <br>
+                        Para comenzar dime ¿Eres un Chico o una Chica?</p>
+                        
+                    </div>
+                    <div class="genero">
+                    <img src="assets/imgs/chico.png" alt="chico">
+                    <img src="assets/imgs/ditto.png" alt="ditto">
+                    <img src="assets/imgs/chica.png" alt="chica">
                     </div>
                 </div>
-                <div>
-                    <img src="" alt="chico">
-                    <img src="" alt="ditto">
-                    <img src="" alt="chica">
-                </div>
             </div>
-            <div class="bosque">
+            <div class="bosque" id="bosque">
+                <div class="bosque-text">
+                    <p>Toca la hierva para encontrar a los pokemon <br>
+                    </p>
+                </div>
+                <div class="bosque-pokemon">
+                    <img src="" alt="">
+                </div>
                 <div class="pasto">
                     <img  src="assets/imgs/pasto.png" alt="">
                     <img  src="assets/imgs/pasto.png" alt="">
@@ -53,12 +64,29 @@
                     <img  src="assets/imgs/pasto.png" alt="">
                     <img  src="assets/imgs/pasto.png" alt="">
                     <img  src="assets/imgs/pasto.png" alt="">
-            </div>
+                    <img  src="assets/imgs/pasto.png" alt="">
+                    <img  src="assets/imgs/pasto.png" alt="">
+                    <img  src="assets/imgs/pasto.png" alt="">
+                    <img  src="assets/imgs/pasto.png" alt="">
+                    <img  src="assets/imgs/pasto.png" alt="">
+                    <img  src="assets/imgs/pasto.png" alt="">
+                    <img  src="assets/imgs/pasto.png" alt="">
+                    <img  src="assets/imgs/pasto.png" alt="">
+                    <img  src="assets/imgs/pasto.png" alt="">
+                </div>
                 <div class="pokemon">
-                    <img class="pikachu" src="assets/imgs/pikachu.png" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <div></div>
+                    <img class="pikachu" src="https://img.pokemondb.net/sprites/platinum/normal/pikachu.png" alt="Pikachu">
+                    <div></div>
+                    <img class="pikachu" src="https://img.pokemondb.net/sprites/platinum/normal/pidgeot.png"  alt="Pidgeot">
+                    <div></div>
+                    <img class="pikachu" src="https://img.pokemondb.net/sprites/heartgold-soulsilver/normal/bidoof-f.png" alt="Bidoof">
+                    <div></div>
+                    <img class="pikachu" src="https://img.pokemondb.net/sprites/heartgold-soulsilver/normal/piplup.png" alt="Piplup">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <img class="pikachu" src="https://img.pokemondb.net/sprites/heartgold-soulsilver/normal/gastly.png" alt="Gastly">
                 </div>
             </div>
             <div class="centro">
@@ -72,10 +100,21 @@
             </div>
         </main>
         <footer>
-            <p>footer</p>
+            <h4>Contacto</h4>
+            <ul>
+                <a target="_blank" href="404.html"><li><i class="fa-brands fa-instagram"></i> Instagram</li></a>
+                <a target="_blank"  href="404.html"><li><i class="fa-brands fa-facebook"></i> Facebook</li></a>
+                <a target="_blank" href="404.html"><li><i class="fa-brands fa-patreon"></i> Patreon</li></a>
+                <a target="_blank" href="https://github.com/Cheskalala"><li><i class="fa-brands fa-github-alt"></i></i> GitHub</li></a>
+                <a target="_blank" href="404.html"><li><i class="fa-brands fa-discord"></i> Discord</li></a>
+                <a target="_blank" href="404.html"><li><i class="fa-brands fa-linkedin"></i> LinkedIn</li></a>
+            </ul>
+            
         </footer>
     </div>
+    <script src="https://kit.fontawesome.com/f946763ad1.js" crossorigin="anonymous"></script>
         <script >
+            
             document.getElementById("pokeball").addEventListener("click", function () {
                 var menu = document.getElementById("menu");
                 if (menu.style.display === "none") {
