@@ -5,7 +5,7 @@
 body{
     background: url(../imgs/pastofondo.png);
     background-size: cover;
-    
+    font-family: 'VT323', monospace;
 }
 .container {
     display: grid;
@@ -19,9 +19,8 @@ body{
     "centro"
     "playa"
     "footer";
-    font-weight: 800;
-    font-size: 12px;
-    text-align: center;
+    
+    font-size: 24px;
 }
 .container a{
     text-decoration: none;
@@ -35,7 +34,7 @@ nav{
     gap: 10px;
     grid-area: nav;
     position: relative;
-    
+
 }
 .pokeball{
     position: relative;
@@ -47,7 +46,7 @@ nav{
     height: 50px;
     width: 100%;
     border-bottom: solid 5px #000;
-    
+
 }
 .pokeball button{
     position: absolute;
@@ -68,11 +67,11 @@ nav{
     position: absolute;
     width: 100%;
     background: #ffff;
-    height: 100vh;
-    z-index: 2;
+    height: 100%;
+    z-index: 3;
     display: none;
 }
-    
+
 
 nav ul{
     display: flex;
@@ -88,10 +87,12 @@ nav ul li{
 }
 
 main{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     margin-top: 70px;
-    justify-content: center;
-    align-items: center;
+    z-index: 2;
+    text-align: center;
 }
 .bienvenida{
     display: block;
@@ -108,8 +109,8 @@ main{
 .prof img{
     width: 140px;
     filter: drop-shadow(5px 5px 3px);
+    transform: rotateY(180deg);
 
-    
 }
 .pregunta{
     display: flex;
@@ -117,7 +118,7 @@ main{
     align-items: center;
 }
 .prof-text {
-    width: 100%;
+    width: 80%;
     margin-top: 5%;
     background: #ffffff;
     color: #000000;
@@ -143,7 +144,7 @@ main{
     filter: grayscale(0);
     filter:drop-shadow(5px 5px 4px)  ;
     transform: scale(2);
-    
+
 }
 .bosque{
     position: relative;
@@ -153,9 +154,10 @@ main{
     grid-row: 3;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10%;
 }
 .bosque-text{
-    width: 100%;
+    width: 80%;
     margin: 25% 0;
     background: #ffffff;
     color: #000000;
@@ -163,7 +165,7 @@ main{
     border-radius: 10px;
     border: solid 5px #ff0000;
     box-shadow: 5px 5px 4px;
-    
+
 }
 .bosque-pokemon{
     width: 100%;
@@ -182,11 +184,7 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-
     left: 0;
-    
-    
-    
 }
 .pasto img:not(:nth-child(-n+12)){
     display: none;
@@ -204,11 +202,11 @@ align-items: center;
 
 }
 .pikachu{
-    
+
     opacity: 0;
     z-index: 4;
     transition: transform .2s;
-    
+
 }
 .pikachu:hover{
     opacity: 100%;
@@ -245,86 +243,88 @@ align-items: center;
     grid-area: playa;
 
 }
-footer{
+.footer{
     display: flex;
     flex-direction: column;
-    height: 20vh;
     background: #ff0000;
     border-top: solid 5px #000000;
     grid-area: footer;
-    margin-top:5% ;
+
     color: #ffffff;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    width: 100%;
 }
-footer h4{
+.footer h4{
+    position: relative;
+    left: 20px;
     font-size: 24px;
     margin-top: 5px;
 }
-footer ul{
-    
+.footer ul{
+    position: relative;
+    left: 30px;
     list-style: none;
     column-count: 2;
     font-size: 16px;
     height: 100%;
 
 }
-footer ul li{
+.footer ul li{
     text-align: start;
     padding: 10px;
     margin-left: 20%;
     color: #ffffff;
-     ;
+
 }
-footer i{
+.footer i{
     font-size: 20px;
     text-shadow: 1px 1px 2px rgb(0, 0, 0) ;
 }
 
-
+footer{
+    width: 100%;
+}
+.mediaq-view{
+    display: none;
+}
 
 
 
 @media  screen and (min-width: 567px){
     .container{
         display: grid;
-        grid-template-columns: 1fr 1.5fr 1fr 1fr;
-        grid-template-rows: 2fr 1fr 1fr 1fr 0.8fr;
-        grid-template-areas: 
-        "nav prof prof prof"
-        "nav pasto pasto pasto"
-        "nav centro centro centro"
-        "nav playa playa playa"
-        "nav footer footer footer"
+        grid-template-columns: 0.2fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "nav prof  "
+        "nav pasto  "
+        "footer footer "
         ;
+        height: 100vh;
     }
 
     .pokeball{
         position: relative;
         display: flex;
         justify-content: center;
-        align-items: start;
         z-index: 3;
         position: absolute;
-        grid-area: nav;
     }
     .pokeball button{
-        
-        background: none;
-        border: none;
+        position: relative;
+        top: 25px;
+        height: 60px;
+        width: 60px;
     }
-    .pokeball img{
-        margin-top: 40px;
-        width: 80px;
-    
-    }
-    
+
+
     nav{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 10px;
-    
+        grid-area: nav;
     }
     .sombra{
         margin-top: 40px;
@@ -335,39 +335,110 @@ footer i{
         opacity: 0%;
     }
     #menu{
-        
+        display: flex;
         position: absolute;
         width: 100%;
-        background: linear-gradient(#ff0000 0%, #ff0000 80px, #ffff 10px, #ffff 100%);
-        height: 100vh;
+        background: #ffff ;
+        height: 100%;
         z-index: 2;
-        width: 20vw;
-        grid-area: nav;
+
 
     }
-    
-    
-    main{
-        
+
+    .bienvenida{
+
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        padding-left: 5%;
     }
-    .pastos{
-        
+    .prof img{
+            width: 300px;
+    }
+    .genero{
+        width: auto;
         display: flex;
-        grid-area: pasto;
-        width: 80vw;
-        
+        gap: 20px;
+        justify-items: center ;
+        align-items: center;
 
     }
+    .genero img{
+        height: auto;
+        max-width: 200px;
+    }
+
+    .genero img:hover{
+        transform: scale(1.5);
+    }
+
+    .bosque{
+        grid-area: pasto;
+        position: relative;
+        margin-top: 10%;
+        margin-bottom: 5%;
+
+    }
+    .bosque-text{
+        width: 60%;
+        margin: 0;
+        background: #ffffff;
+        color: #000000;
+        padding: 20px 0px;
+    }
+    .footer h4{
+        position: relative;
+        left: 30%;
+        font-size: 24px;
+        margin-top: 10px;
+    }
+    .footer ul{
+        position: relative;
+        left: 30%;
+        list-style: none;
+        column-count: 2;
+        font-size: 16px;
+        height: 100%;
+        width: 50%;
+    }
+
     .pasto{
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         justify-items: center;
         align-content: center;
         gap: 0px;
-        
+        margin: 50px;
+
     }
+    .pasto img:not(:nth-child(-n+12)){
+        display: grid;
+    }
+    .pokemon{
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(4,1fr);
+        width: calc(110*8px);
+        height: calc(147*4px);
+        top: 15.5%;
+        justify-items: center;
+        align-items: center;
+    }
+    .mediaq-view{
+        display: flex;
+    }
+    .footer{
+        width: 100%;
+    }
+}
+@media  screen and (min-width: 1024px){
+
+    main{
+        display: flex;
+        flex-direction: column;
 
 
-
+    }
 
 }
