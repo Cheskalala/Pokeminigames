@@ -44,8 +44,9 @@ nav{
     height: 3.5rem;
     z-index: 3;
     width: 100%;
-
+    display: flex;
 }
+
 .button{
     position: absolute;
     top: 10px;
@@ -75,7 +76,12 @@ nav{
     height: 50vh;
 
 }
-
+.menu img{
+    width: 50px;
+}
+.menu p{
+    font-size: 12px;
+}
 .menu ul{
     display: flex;
     flex-direction: column;
@@ -204,7 +210,7 @@ grid-template-columns: repeat(3,1fr);
 grid-template-rows: repeat(4,1fr);
 width: calc(110*3px);
 height: calc(146.667*4px);
-top: 28.5%;
+top: 36%;
 justify-items: center;
 align-items: center;
 
