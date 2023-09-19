@@ -204,7 +204,7 @@ grid-template-columns: repeat(3,1fr);
 grid-template-rows: repeat(4,1fr);
 width: calc(110*3px);
 height: calc(146.667*4px);
-top: 28.5%;
+top: 36%;
 justify-items: center;
 align-items: center;
 
