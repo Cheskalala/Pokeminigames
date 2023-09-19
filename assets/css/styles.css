@@ -76,12 +76,7 @@ nav{
     height: 50vh;
 
 }
-.menu img{
-    width: 51px;
-}
-.menu p{
-    font-size: 11px;
-}
+
 .menu ul{
     display: flex;
     flex-direction: column;
@@ -416,6 +411,7 @@ footer{
         left: 30%;
         font-size: 24px;
         margin-top: 10px;
+        width: 100px;
     }
     .footer ul{
         position: relative;
