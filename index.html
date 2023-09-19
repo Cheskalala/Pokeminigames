@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokeminigames</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,18 +11,16 @@
 </head>
 <body>
     <div class="container">
-
-        <nav >
-            <div class="pokeball">
-                <button id="pokeball"></button>
-            </div>
-            <div id="menu">
-                <ul >
-                    <a href="#bienvenida"><li>Bienvenida</li></a>
-                    <a href=""><li>Centro Pokemon</li></a>
-                    <a href="#bosque"><li>Bosque</li></a>
-                    <a href=""><li>Playa</li></a>
-                    <a href="#contacto"><li>Contacto</li></a>
+        <nav>
+            <div class="pokeball"></div>
+            <button class="button" id="pokeball"><p>Pulsame</p></button>
+            <div class="menu"  >
+                <ul class="ul" >
+                    <li class="li"><a href="#bienvenida">Bienvenida</a></li>
+                    <li class="li"><a target="_blank" href="404.html">Centro Pokemon</a></li>
+                    <li class="li"><a href="#bosque">Bosque</a></li>
+                    <li class="li"><a target="_blank" href="404.html">Playa</a></li>
+                    <li class="li"><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -145,16 +143,6 @@
         </footer>
     </div>
     <script src="https://kit.fontawesome.com/f946763ad1.js" crossorigin="anonymous"></script>
-        <script >
-            
-            document.getElementById("pokeball").addEventListener("click", function () {
-                var menu = document.getElementById("menu");
-                if (menu.style.display === "none") {
-                    menu.style.display = "block";
-                } else {
-                    menu.style.display = "none";
-                }
-            });
-        </script>
+    <script src="assets/scritps/scripts.js"></script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(../imgs/fondoespacio.jpg);
+    background-size: cover;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-family: 'VT323', monospace;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+img{
+width: 400px;
+transform: rotateY(180deg);
+position: relative;
+z-index: 3;
+top: 60px;
+left: 70px;
+}
+.texto{
+position: relative;
+z-index: 3;
+left: 90px;
+bottom: 90px;
+}
+.texto h1{
+    width: 200px;
+}
+.texto h3{
+    margin-top: 10%;
+    width: 300px;
+}
+.fondo{
+    height: 600px;
+    width: 800px;
+    background: #c4d1fa;
+    transform: rotate(20deg);
+    border-radius: 50%;
+    position:absolute;
+    z-index: 1;
+    opacity: 70%;
+}
+p{
+    position: absolute;
+    font-size: 100px;
+    bottom: 520px;
+    left: 820px;
+}
